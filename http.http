@@ -1,0 +1,17 @@
+POST https://uri-predictor-ds-project-1.apps.rosa.esamoylo-odh.55gb.p3.openshiftapps.com/v2/models/uri/infer HTTP/1.1
+content-type: application/json
+
+{
+  "inputs": [
+      {
+          "name": "dense_input",
+          "shape": [1, 5],
+          "datatype": "FP32",
+          "data": [-0.1685591604442391, 0.04323738843577523, 1.3592881237755046, -0.33397802138714455, -1.3639541744931971]
+      }
+  ]
+}
+
+###
+
+GET https://uri-predictor-ds-project-1.apps.rosa.esamoylo-odh.55gb.p3.openshiftapps.com/v1/models HTTP/1.1
