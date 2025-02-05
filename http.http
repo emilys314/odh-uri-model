@@ -1,5 +1,6 @@
-GET https://uri-predictor-___/v2/models/model/ HTTP/1.1
+POST https://raw4-dsproject1.apps.rosa.esamoylo-odh.55gb.p3.openshiftapps.com/v2/models/raw4/infer HTTP/1.1
 content-type: application/json
+Authorization: Bearer 
 
 {
   "inputs": [
@@ -12,6 +13,25 @@ content-type: application/json
   ]
 }
 
+
+
 ###
 
-GET https://uri-predictor-___/v1/models HTTP/1.1
+GET https://raw2-dsproject1.apps.rosa.esamoylo-odh.55gb.p3.openshiftapps.com/v2 HTTP/1.1
+
+###
+
+###
+POST http://localhost:8888/v2/models/private2/infer HTTP/1.1
+content-type: application/json
+
+{
+  "inputs": [
+      {
+          "name": "dense_input",
+          "shape": [1, 5],
+          "datatype": "FP32",
+          "data": [-0.1685591604442392, 0.44323738843577523, 1.3592881237755046, -0.33397802138714455, -1.3639541744931971]
+      }
+  ]
+}
